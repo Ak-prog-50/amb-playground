@@ -35,7 +35,7 @@ async function main() {
     const deployedContract = await deployTx
       .send({
         from: signer.address,
-        gas: await deployTx.estimateGas(),
+        gas: "5000000",
         value: lockedAmount,
       })
       .once("transactionHash", (txhash) => {
